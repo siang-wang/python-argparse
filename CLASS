@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+
+import argparse
+
+# 建立一個參數解析器，並為程式功能加上說明
+parser = argparse.ArgumentParser(description='Say Hello')
+
+# 增加一個想要的參數名稱 --name, 以及參數的使用說明
+parser.add_argument('--name', help='What is your name?')
+
+# 解析參數
+args = parser.parse_args()
+
+# 把參數 name 的值印出來
+print('Hello', args.name)
